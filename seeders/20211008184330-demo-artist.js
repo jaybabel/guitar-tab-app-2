@@ -2,22 +2,22 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.bulkInsert('artist', 
+    await queryInterface.bulkInsert('Artists', 
     [
       {
-        name: 'Jerry Jeff Walker'
+        artistName: 'Jerry Jeff Walker'
       },
       {
-        name: 'Cat Stevens'
+        artistName: 'Cat Stevens'
       },
       {
-        name: 'Bread'
+        artistName: 'Bread'
       },
       {
-        name: 'Christian hymn (wds by John Newton)'
+        artistName: 'Christian hymn (wds by John Newton)'
       },
       {
-        name: 'Traditional'
+        artistName: 'Traditional'
       }
         ], 
     {}

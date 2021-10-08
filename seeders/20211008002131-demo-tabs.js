@@ -2,16 +2,16 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.bulkInsert('tabs', 
+    await queryInterface.bulkInsert('Tabs', 
     [
       {
         tabTitle: 'Amazing Grace',
         tabURL: '/tabs/amazing-grace-gtm.pdf',
         tuning: '1',
         difficulty: 'Easy',
-        artist: '',
+        artist: '4',
         genre: '',
-        tabSource: '',
+        tabSource: 'https://www.capotastomusic.com/guitar_pages/guitar_tablature.htm',
         rating: '',
       },
       {
@@ -19,9 +19,9 @@ module.exports = {
         tabURL: '/tabs/everything_i_own_tab.pdf',
         tuning: '1',
         difficulty: '',
-        artist: '',
+        artist: '3',
         genre: '',
-        tabSource: '',
+        tabSource: 'www.jerrysguitarbar.com',
         rating: '',
       },
       {
@@ -29,9 +29,9 @@ module.exports = {
         tabURL: '/tabs/father_and_son_tab.pdf',
         tuning: '1',
         difficulty: '',
-        artist: '',
+        artist: '2',
         genre: '',
-        tabSource: '',
+        tabSource: 'www.jerrysguitarbar.com',
         rating: '',
       },
       {
@@ -39,9 +39,9 @@ module.exports = {
         tabURL: '/tabs/house-of-the-rising-sun-gtm.pdf',
         tuning: '1',
         difficulty: 'Easy',
-        artist: '',
+        artist: '5',
         genre: '',
-        tabSource: '',
+        tabSource: 'https://www.capotastomusic.com/guitar_pages/guitar_tablature.htm',
         rating: '',
       },
       {
@@ -49,9 +49,9 @@ module.exports = {
         tabURL: '/tabs/mr_bojangles_tab.pdf',
         tuning: '1',
         difficulty: '',
-        artist: '',
+        artist: '1',
         genre: '',
-        tabSource: '',
+        tabSource: 'www.jerrysguitarbar.com',
         rating: '',
       },
       {
@@ -59,9 +59,9 @@ module.exports = {
         tabURL: '/tabs/red-river-valley-gtm.pdf',
         tuning: '1',
         difficulty: 'Easy',
-        artist: '',
+        artist: '5',
         genre: '',
-        tabSource: '',
+        tabSource: 'https://www.capotastomusic.com/guitar_pages/guitar_tablature.htm',
         rating: '',
       }
     ], 

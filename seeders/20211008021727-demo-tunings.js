@@ -2,7 +2,7 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.bulkInsert('tunings', 
+    await queryInterface.bulkInsert('Tunings', 
     [
       {
         tuningName: 'Standard tuning',

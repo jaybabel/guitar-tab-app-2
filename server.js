@@ -8,9 +8,9 @@ app.use(express.static('public'));
 app.use(methodOverride('_method'))
 app.use(express.urlencoded({ extended: true}))
 
-// app.get('/', (req, res) => {
-//     res.render('index.ejs')
-//   })
+app.get('/', (req, res) => {
+    res.render('index.ejs')
+  })
 
 app.use('/tabs', routes.tabs)
 

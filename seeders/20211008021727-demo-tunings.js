@@ -5,6 +5,10 @@ module.exports = {
     await queryInterface.bulkInsert('tunings', 
     [
       {
+        tuningName: 'Standard tuning',
+        tuningURL: '/images/standard_tuning.jpeg'
+      },
+      {
         tuningName: 'cgdgcd',
         tuningURL: '/images/cgdgcd_tuning.jpeg'
       },

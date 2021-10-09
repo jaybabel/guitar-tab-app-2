@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jay's Guitar Tab App</title>
+    <link rel="stylesheet" href="/css/admin.css">
+</head>
+
+<body>
+    <header>
+        <h1>Guitar Tab Application Admin</h1>
+        <h4>Admin login</h4>
+    </header>
+    <main>
+        <form action="/tab" method="POST">
+            <h2>New Guitar Tab Record</h2>
+            Title<input type="text" name="tabTitle"/><br><br>
+            <label for="artist">Artist</label>
+            <select name="artist" id="artist"></select>
+            <label for="difficulty">Difficulty</label>
+            <select name="difficulty" id="difficulty"></select>
+            <label for="genre">Genre</label>
+            <select name="genre" id="genre"></select>
+            <label for="rating">Rating</label>
+            <select name="rating" id="rating"></select>
+            <label for="tuning">Tuning</label>
+            <select name="tuning" id="tuning"></select>
+            Source<input type="text" name="tabSource"/><br><br>
+        </div>
+    </main>
+    <footer>
+        <br><br>
+        <a href="/tabs/showTab">Show Tab Page</a>
+    </footer>
+</body>
+
+</html>

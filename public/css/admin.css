@@ -1,0 +1,17 @@
+html {
+    background-image: url('/images/fire-guitars.jpeg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+h4 {
+    text-align: right;
+}

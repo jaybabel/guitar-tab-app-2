@@ -10,29 +10,17 @@ main {
     padding-left: 50px;
 }
 
-#searchCriteria {
+#displayTab {
+    width: 500px;
     display: flex;
     flex-direction: column;
 }
 
-#searchResults {
-    width: 750px;
+#sidebar {
+    width: 200px;
     padding-left: 50px;
     padding-right: 25px;
-}
-
-#resultsList {
-    border: 1px solid black;
     background-color: rgba(225, 225, 225, 0.9);
-}
-
-footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 25px;
-    background-color: rgba(231, 123, 83, 0.3);
-    padding: 20px 20px 20px 20px;
 }
 
 h1 {
@@ -45,4 +33,11 @@ h2 {
 
 h4 {
     text-align: right;
+}
+
+#tuningImage {
+    border: solid silver thin;
+    border-radius: 5%;
+    width: 75%;
+    height: auto;
 }

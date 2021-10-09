@@ -1,0 +1,38 @@
+main {
+    display: flex;
+    align-content:space-between;
+    padding-left: 50px;
+}
+
+#searchCriteria {
+    display: flex;
+    flex-direction: column;
+}
+
+#searchResults {
+    width: 750px;
+    padding-left: 50px;
+    padding-right: 25px;
+}
+
+#resultsList {
+    border: 1px solid black;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    text-align: right;
+}

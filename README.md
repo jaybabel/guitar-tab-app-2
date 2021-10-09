@@ -29,6 +29,9 @@ The Chord Shapes/Finder is a stretch goal to open a page with the chord shapes r
 
 The LessonLinks table is for a stretch goal.
 
+![Screen Shot 2021-10-09 at 4 11 51 PM](https://user-images.githubusercontent.com/8105789/136674021-52e482fd-0da7-4fd5-9264-038f7fb1a942.jpeg)
+
+
 User stories - Jay’s Fabulous Guitar Tab Database
 
 I am a ________

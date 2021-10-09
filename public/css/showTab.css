@@ -8,12 +8,13 @@ main {
     display: flex;
     align-content:space-between;
     padding-left: 50px;
+    flex-direction: row;
 }
 
 #displayTab {
-    width: 500px;
     display: flex;
     flex-direction: column;
+    width: 850px;
 }
 
 #sidebar {

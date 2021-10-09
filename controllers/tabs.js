@@ -2,7 +2,6 @@ const Tab = require('../models').Tab
 
 const index = (req, res) => {
     Tab.findAll().then(tabs => {
-        console.log(tabs)
         res.render('index.ejs', {
             tabs: tabs
         })

@@ -11,6 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       Tab.belongsTo(models.Tuning, { foreignKey: "tuning"})
+      Tab.belongsTo(models.Artist, { foreignKey: "artist"})
     }
   };
   Tab.init({

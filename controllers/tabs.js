@@ -1,5 +1,6 @@
 const Tab = require('../models').Tab
 const Tuning = require('../models').Tuning
+const Artist = require('../models').Artist
 
 const index = (req, res) => {
     Tab.findAll().then(tabs => {
@@ -11,7 +12,10 @@ const index = (req, res) => {
 
 const show = (req, res) => {
     Tab.findByPk(req.params.index, {
-        include: [Tuning]
+        include: [
+            Tuning,
+            Artist
+        ]
     })
         .then(tab => {
             res.render('showTab.ejs', {

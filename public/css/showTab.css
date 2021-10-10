@@ -24,11 +24,11 @@ main {
     background-color: rgba(225, 225, 225, 0.9);
 }
 
-#tabSource {
+#detail {
     width: 300px;
     inline-size: 300px;
     overflow-wrap: break-word;
-    background-color: rgba(235,235,235, 0.9);
+    background-color: rgba(243, 232, 232, 0.3);
 }
 
 h1 {
@@ -41,6 +41,12 @@ h2 {
 
 h4 {
     text-align: right;
+}
+
+h5 {
+    text-align: left;
+    font-size: medium;
+    margin-bottom: 0px;
 }
 
 #tuningImage {

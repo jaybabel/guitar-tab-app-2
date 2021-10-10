@@ -11,6 +11,7 @@
     <header>
         <h1>Show selected tab</h1>
         <h2><%=tab.tabTitle%></h2>
+        <h2>(<%=tab.difficulty%>)</h2>
     </header>
     <main>
         <div id="displayTab">
@@ -24,9 +25,11 @@
             <img id="tuningImage" src="<%=tab.Tuning.tuningURL%>">
             <br><br>
             <a href="http://chordfind.com/" target="_blank">ChordFind</a>
-            <br><br>
-            <div id="tabSource">
-                <h3>Tab Source:</h3>
+            <br><br>           
+            <div id="detail">
+                <h5>Artist: </h5>
+                <p><%= tab.Artist.artistName %></p>
+                <h5>Tab Source:</h5>
                 <p><%= tab.tabSource %></p>
             </div>
             <br><br>

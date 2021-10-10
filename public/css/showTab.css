@@ -11,6 +11,11 @@ main {
     flex-direction: row;
 }
 
+header {
+    background-color: rgba(255, 235, 205, 0.3);
+    text-align: center;
+}
+
 #displayTab {
     display: flex;
     flex-direction: column;

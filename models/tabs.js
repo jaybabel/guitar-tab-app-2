@@ -1,6 +1,6 @@
 'use strict';
 const {
-  Model
+  Model, TableHints
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class Tab extends Model {
@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      Tab.belongsTo(models.Tuning, { foreignKey: "tuning"})
     }
   };
   Tab.init({

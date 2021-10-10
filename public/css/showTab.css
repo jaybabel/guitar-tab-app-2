@@ -18,10 +18,17 @@ main {
 }
 
 #sidebar {
-    width: 200px;
+    width: 300px;
     padding-left: 50px;
     padding-right: 25px;
     background-color: rgba(225, 225, 225, 0.9);
+}
+
+#tabSource {
+    width: 300px;
+    inline-size: 300px;
+    overflow-wrap: break-word;
+    background-color: rgba(235,235,235, 0.9);
 }
 
 h1 {

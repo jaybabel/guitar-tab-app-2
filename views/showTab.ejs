@@ -10,11 +10,12 @@
 <body>
     <header>
         <h1>Show selected tab</h1>
+        <h2><%=tab.tabTitle%></h2>
     </header>
     <main>
         <div id="displayTab">
             <iframe
-                src="/tabs/father_and_son_tab.pdf" width="100%" height="600px">
+                src="<%= tab.tabURL %>" width="100%" height="600px">
             </iframe>
         </div>
         <div id="sidebar">
@@ -23,13 +24,14 @@
             <br><br>
             <a href="http://chordfind.com/" target="_blank">ChordFind</a>
             <br><br>
-            <h3>Tab Source:</h3>
-            <p>tab source info here</p>
+            <div id="tabSource">
+                <h3>Tab Source:</h3>
+                <p><%= tab.tabSource %></p>
+            </div>
             <br><br>
             <a href="/">Main Page</a>
             <br><br> 
         </div>
-        <a href="/<%=tab.id%>"><%=tab.tabTitle%></a>
     </main>
     <br><br>
     <br><br>

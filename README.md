@@ -29,6 +29,12 @@ The Chord Shapes/Finder is a stretch goal to open a page with the chord shapes r
 
 The LessonLinks table is for a stretch goal.
 
+![Screen Shot 2021-10-09 at 5 32 38 PM](https://user-images.githubusercontent.com/8105789/136675330-76f7cb9d-9f8f-49f3-876f-0267753985bd.jpeg)
+
+The application will not require a user login except for the admin.  The user table will only be used for admin logon initially.  Possibly a stretch goal could be to allow optional login for non-admin accounts to enable some personalization and a dynamic rating system.
+
+Admin screen:
+
 ![Screen Shot 2021-10-09 at 4 11 51 PM](https://user-images.githubusercontent.com/8105789/136674021-52e482fd-0da7-4fd5-9264-038f7fb1a942.jpeg)
 
 

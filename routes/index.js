@@ -1,3 +1,4 @@
 module.exports = {
-    tabs: require('./tabs')
+    tabs: require('./tabs'),
+    users: require('./users')
 }

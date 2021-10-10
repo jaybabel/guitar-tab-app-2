@@ -6,13 +6,60 @@ const index = (req, res) => {
             tabs: tabs
         })
     })
-  }
+}
 
-const renderShowTab = (req, res) => {
-    res.render('showTab.ejs')
+const show = (req, res) => {
+    Tab.findByPk(req.params.index)
+        .then(tab => {
+            res.render('showTab.ejs', {
+                tab: tab
+            });
+        });
+}
+
+const deleteTab = (req, res) => {
+    Tab.destroy({ where: { id: req.params.index } })
+        .then(() => {
+            res.redirect('/')
+        })
+}
+
+const renderEdit = (req, res) => {
+    Tab.findByPk(req.params.index)
+        .then(foundTab => {
+            res.render('editTab.ejs', {
+                tab: foundTab
+            });
+        });
+}
+
+const editTab = (req, res) => {
+    Tab.update(req.body, {
+        where: { id: req.params.index },
+        returning: true,
+    }
+    )
+        .then(tab => {
+            res.redirect('/')
+        })
+}
+
+const renderNew = (req, res) => {
+    res.render('new.ejs')
+}
+
+const postTab = (req, res) => {
+    Tab.create(req.body).then((newTab) => {
+        res.redirect('/');
+    })
 }
 
 module.exports = {
     index,
-    renderShowTab
+    renderNew,
+    postTab,
+    deleteTab,
+    renderEdit,
+    editTab,
+    show
 }

@@ -6,12 +6,26 @@ html {
 
 h1 {
     text-align: center;
+    color: whitesmoke;
 }
 
 h2 {
     text-align: center;
+    color: whitesmoke;
 }
 
 h4 {
     text-align: right;
+    color: whitesmoke;
+}
+
+form {
+    padding-left: 50px;
+    color: whitesmoke;
+    height: 500px;
+}
+
+footer {
+    padding-left: 50px;
+    background-color: rgba(245, 245, 245, 0.5);
 }

@@ -64,7 +64,9 @@
                <ul>
                    <% for(let i=0; i <tabs.length; i++) { %>
                         <li>
-                            <%= tabs[i].tabTitle %> | <%= tabs[i].artist %> | <%= tabs[i].difficulty %> | <%= tabs[i].genre %> | <%= tabs[i].rating %> | <%= tabs[i].tuning %>
+                            <a href="/tabs/<%= tabs[i].id %>">
+                                <%= tabs[i].tabTitle %> | <%= tabs[i].artist %> | <%= tabs[i].difficulty %> | <%= tabs[i].genre %> | <%= tabs[i].rating %> | <%= tabs[i].tuning %>
+                            </a>
                         </li>                        
                     <% } %>
                 </ul>

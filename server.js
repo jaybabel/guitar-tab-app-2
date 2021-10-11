@@ -13,6 +13,7 @@ app.get('/', (req, res) => {
   })
 
 app.use('/tabs', routes.tabs)
+app.use('/users', routes.users)
 
 // listen at port 3003
 app.listen(3003, () => {

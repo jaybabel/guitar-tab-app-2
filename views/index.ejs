@@ -19,9 +19,9 @@
             <h2>Search Tabs by:</h2>
             <label for="tabTitle">Title</label>
             <select name="tabTitle" id="tabTitle">
-                <option value="tabTitle">Title 1</option>
-                <option value="tabTitle">Title 2</option>
-                <option value="tabTitle">Title 3</option>
+                <% for(let i=0; i <tabs.length; i++) { %>
+                    <option value="tabTitle"><%= tabs[i].tabTitle %></option>
+                <% } %>
             </select>
             <label for="artist">Artist</label>
             <select name="artist" id="artist">
@@ -64,7 +64,7 @@
                <ul>
                    <% for(let i=0; i <tabs.length; i++) { %>
                         <li>
-                            <%= tabs[i].tabTitle %>
+                            <%= tabs[i].tabTitle %> | <%= tabs[i].artist %> | <%= tabs[i].difficulty %> | <%= tabs[i].genre %> | <%= tabs[i].rating %> | <%= tabs[i].tuning %>
                         </li>                        
                     <% } %>
                 </ul>

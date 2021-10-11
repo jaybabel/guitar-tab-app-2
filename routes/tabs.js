@@ -3,6 +3,8 @@ const router = express.Router();
 const ctrl = require('../controllers');
 
 router.get('/', ctrl.tabs.index)
+
+router.get('/:index/delete', ctrl.tabs.renderDelete)
 router.delete('/:index', ctrl.tabs.deleteTab)
 router.get('/new', ctrl.tabs.renderNew)
 

@@ -36,6 +36,20 @@ header {
     background-color: rgba(243, 232, 232, 0.3);
 }
 
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+    background-color: rgba(150, 125, 90, 0.5);
+    padding: 20px 20px 20px 20px;
+}
+
+#CRUD {
+    display: flex;
+    align-content:space-between;
+}
+
 h1 {
     text-align: center;
 }
@@ -60,3 +74,4 @@ h5 {
     width: 75%;
     height: auto;
 }
+

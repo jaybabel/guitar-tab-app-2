@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jay's Guitar Tab App</title>
+    <link rel="stylesheet" href="/css/newtab.css">
+</head>
+
+<body>
+    <header>
+        <h1>New Tab Page</h1>
+        <h4>Admin login</h4>
+    </header>
+    <main>
+        <form action="/tabs" method="POST">
+            <h2>New Guitar Tab Record</h2>
+            Title: <input type="text" name="tabTitle"/><br><br>
+            <label for="artist">Artist:</label>
+            <select name="artist" id="artist">
+                <% for(let i=0; i <artists.length; i++) { %>
+                <option value="<%= artists[i].id %>"><%= artists[i].artistName %></option>
+                <% } %>
+            </select><br><br>
+            <label for="difficulty">Difficulty:</label>
+            <select name="difficulty" id="difficulty">
+                <option value="Easy">Easy</option>
+                <option value="Moderate">Moderate</option>
+                <option value="Difficult">Difficult</option>
+            </select><br><br>
+            <label for="genre">Genre:</label>
+            <select name="genre" id="genre">
+                <option value="Pop">Pop</option>
+                <option value="Folk/Traditional">Folk/Traditional</option>
+                <option value="Rock">Rock</option>                
+                <option value="Country">Country</option>
+                <option value="Easy Listening">Easy Listening</option>
+                <option value="Holiday">Holiday</option>                
+            </select><br><br>
+            <label for="rating">Rating:</label>
+            <select name="rating" id="rating">
+                <option value="5">5</option>
+                <option value="4">4</option>
+                <option value="3">3</option>
+                <option value="2">2</option>
+                <option value="1">1</option>
+            </select><br><br>
+            <label for="tuning">Tuning:</label>
+            <select name="tuning" id="tuning">
+                <% for(let i=0; i <tunings.length; i++) { %>
+                <option value="<%= tunings[i].id %>"><%= tunings[i].tuningName %></option>
+                <% } %>
+            </select><br><br>
+            Source: <input type="text" name="tabSource"/><br><br>
+            TabFile: <input type="text" name="tabURL"/><br><br>
+            <br><br>
+                <input type="submit" value="Create Guitar Tab"/>
+            <br><br>
+        </form>
+    </main>
+    <footer>
+        <br><br>
+        <a href="/">Main Page</a>
+        <br><br>
+    </footer>
+</body>
+
+</html>

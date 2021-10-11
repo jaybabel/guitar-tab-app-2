@@ -30,6 +30,15 @@ const show = (req, res) => {
         });
 }
 
+const renderDelete = (req, res) => {
+    Tab.findByPk(req.params.index)
+        .then(foundTab => {
+            res.render('deleteTab.ejs', {
+                tab: foundTab
+            })
+        })
+}
+
 const deleteTab = (req, res) => {
     Tab.destroy({ where: { id: req.params.index } })
         .then(() => {
@@ -78,6 +87,7 @@ module.exports = {
     index,
     renderNew,
     postTab,
+    renderDelete,
     deleteTab,
     renderEdit,
     editTab,

@@ -6,17 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jay's Guitar Tab App</title>
-    <link rel="stylesheet" href="/css/admin.css">
+    <link rel="stylesheet" href="/css/delete.css">
 </head>
 
 <body>
     <header>
-        <h1>Edit Tab Page</h1>
+        <h1>Delete Tab Page</h1>
         <h4>Admin login</h4>
     </header>
     <main>
         <form action="/tab" method="POST">
-            <h2>Update Guitar Tab Record</h2>
+            <h2>Delete Guitar Tab Record</h2>
             Title: <input type="text" name="tabTitle" value="<%= tab.tabTitle %>"/><br><br>
             Artist: <input type="text" name="artist" value="<%= tab.artist %>"/><br><br>
             Difficulty: <input type="text" name="difficulty" value="<%= tab.difficulty %>"/><br><br>
@@ -25,12 +25,8 @@
             Tuning: <input type="text" name="tuning" value="<%= tab.tuning %>"/><br><br>
             Source: <input type="text" name="tabSource" value="<%= tab.tabSource %>"/><br><br>
             Tab File: <input type="text" name="tabSource" value="<%= tab.tabURL %>"/>
-            <form action="">
-                <input type="file" id="myfile" name="myfile"><br><br>
-                <input type="submit">
-            </form>
-            <br><br>
-            <input type="submit" name="" value="Update Guitar Tab"/>
+            <br><br><br><br>
+            <input type="submit" name="" value="Delete Guitar Tab"/>
             <br><br>
         </form>
     </main>

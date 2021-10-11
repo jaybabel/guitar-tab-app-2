@@ -25,16 +25,16 @@
             Tuning: <input type="text" name="tuning" value="<%= tab.tuning %>"/><br><br>
             Source: <input type="text" name="tabSource" value="<%= tab.tabSource %>"/><br><br>
             Tab File: <input type="text" name="tabSource" value="<%= tab.tabURL %>"/>
-            <br><br><br><br>
+            <br>
         </form>
         <form action="/tabs/<%= tab.id %>?_method=DELETE" method="POST">
             <input type="submit" name="" value="Delete Guitar Tab"/>
         </form>
-        <br><br>
     </main>
     <footer>
-        <br><br>
+        <br>
         <a href="/">Main Page</a>
+        <br><br>
     </footer>
 </body>
 

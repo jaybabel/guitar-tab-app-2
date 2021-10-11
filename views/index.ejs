@@ -18,15 +18,40 @@
         <div id="searchCriteria">
             <h2>Search Tabs by:</h2>
             <label for="tabTitle">Title</label>
-            <select name="tabTitle" id="tabTitle"></select>
+            <select name="tabTitle" id="tabTitle">
+                <option value="tabTitle">Title 1</option>
+                <option value="tabTitle">Title 2</option>
+                <option value="tabTitle">Title 3</option>
+            </select>
             <label for="artist">Artist</label>
-            <select name="artist" id="artist"></select>
+            <select name="artist" id="artist">
+                <option value="artist">Artist 1</option>
+                <option value="artist">Artist 2</option>
+                <option value="artist">Artist 3</option>
+            </select>
             <label for="difficulty">Difficulty</label>
-            <select name="difficulty" id="difficulty"></select>
+            <select name="difficulty" id="difficulty">
+                <option value="difficulty">Easy</option>
+                <option value="difficulty">Moderate</option>
+                <option value="difficulty">Difficult</option>
+            </select>
             <label for="genre">Genre</label>
-            <select name="genre" id="genre"></select>
+            <select name="genre" id="genre">
+                <option value="genre">Pop</option>
+                <option value="genre">Folk/Traditional</option>
+                <option value="genre">Rock</option>                
+                <option value="genre">Country</option>
+                <option value="genre">Easy Listening</option>
+                <option value="genre">Holiday</option>                
+            </select>
             <label for="rating">Rating</label>
-            <select name="rating" id="rating"></select>
+            <select name="rating" id="rating">
+                <option value="rating">5</option>
+                <option value="rating">4</option>
+                <option value="rating">3</option>
+                <option value="rating">2</option>
+                <option value="rating">1</option>
+            </select>
             <label for="tuning">Tuning</label>
             <select name="tuning" id="tuning"></select>
         </div>
@@ -34,12 +59,9 @@
             <h2>Search Results</h2>
             <div id="resultsList">
                <ul>
-                    <li>Guitar Tab Record 1</li>
-                    <li>Guitar Tab Record 2</li>
-                    <li>Guitar Tab Record 3</li>
-                    <li>Guitar Tab Record 4</li>
-                    <li>Guitar Tab Record 5</li>
-                    <li>Guitar Tab Record 6</li>
+                   <% for(let i=0; i<6; i++) { %>
+                        <li>Guitar Tab Record 1</li>
+                    <% } %>
                 </ul>
             </div>
         </div>

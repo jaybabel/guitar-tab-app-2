@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
     res.render('index.ejs')
   })
 
-app.use('/tabs', routes.tabs)
+app.use('/tab', routes.tabs)
 app.use('/users', routes.users)
 
 // listen at port 3003

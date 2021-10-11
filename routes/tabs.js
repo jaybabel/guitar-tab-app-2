@@ -6,7 +6,7 @@ router.get('/', ctrl.tabs.index)
 router.delete('/:index', ctrl.tabs.deleteTab)
 router.get('/new', ctrl.tabs.renderNew)
 
-router.get('/:index/editTab', ctrl.tabs.renderEdit)
+router.get('/:index/edit', ctrl.tabs.renderEdit)
 router.put('/:index', ctrl.tabs.editTab)
 
 router.post('/', ctrl.tabs.postTab)

@@ -31,7 +31,7 @@ const renderProfile = (req, res) => {
             attributes: ['id','name']
         }] 
     })
-    .then(userProfile => {
+    .then((user) => {
         res.render('users/profile.ejs', {
             user: user
         })

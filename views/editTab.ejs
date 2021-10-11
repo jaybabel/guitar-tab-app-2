@@ -17,25 +17,25 @@
     <main>
         <form action="/tab" method="POST">
             <h2>New Guitar Tab Record</h2>
-            Title<input type="text" name="tabTitle"/><br><br>
-            <label for="artist">Artist</label>
-            <select name="artist" id="artist"></select>
-            <label for="difficulty">Difficulty</label>
-            <select name="difficulty" id="difficulty"></select>
-            <label for="genre">Genre</label>
-            <select name="genre" id="genre"></select>
-            <label for="rating">Rating</label>
-            <select name="rating" id="rating"></select>
-            <label for="tuning">Tuning</label>
-            <select name="tuning" id="tuning"></select>
-            Source<input type="text" name="tabSource"/><br><br>
-            <br><br>
+            Title: <input type="text" name="tabTitle"/><br><br>
+            Artist: <input type="text" name="artist"/><br><br>
+            Difficulty: <input type="text" name=""/><br><br>
+            Genre: <input type="text" name="genre"/><br><br>
+            Rating: <input type="text" name="rating"/><br><br>
+            Tuning: <input type="text" name="tuning"/><br><br>
+            Source: <input type="text" name="tabSource"/><br><br>
+            <form action="">
+                <label for="myfile">Select a tab file:</label>
+                <input type="file" id="myfile" name="myfile"><br><br>
+                <input type="submit">
+            </form>
             <input type="submit" name="" value="Create Guitar Tab"/>
+            <br><br>
         </form>
     </main>
     <footer>
         <br><br>
-        <a href="/tabs/showTab">Show Tab Page</a>
+        <a href="/tab/1">Show Tab Page</a>
     </footer>
 </body>
 

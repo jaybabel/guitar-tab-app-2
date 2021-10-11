@@ -4,7 +4,6 @@ const Artist = require('../models').Artist
 
 const index = (req, res) => {
     Tab.findAll().then(tabs => {
-        console.log(tabs)
         res.render('index.ejs', {
             tabs: tabs
         })
@@ -53,7 +52,14 @@ const editTab = (req, res) => {
 }
 
 const renderNew = (req, res) => {
-    res.render('newTab.ejs')
+    Artist.findAll().then(artists => {
+        Tuning.findAll().then(tunings => {
+            res.render('newTab.ejs', {
+                artists: artists,
+                tunings: tunings
+            })
+        })
+    })
 }
 
 const postTab = (req, res) => {

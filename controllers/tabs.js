@@ -3,9 +3,15 @@ const Tuning = require('../models').Tuning
 const Artist = require('../models').Artist
 
 const index = (req, res) => {
-    Tab.findAll().then(tabs => {
-        res.render('index.ejs', {
-            tabs: tabs
+    Artist.findAll().then(artists => {
+        Tuning.findAll().then(tunings => {
+            Tab.findAll().then(tabs => {
+                res.render('index.ejs', {
+                    artists: artists,
+                    tunings: tunings,
+                    tabs: tabs
+                })
+            })
         })
     })
 }

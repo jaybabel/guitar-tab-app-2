@@ -1,4 +1,5 @@
 const express = require('express')  // to load express modules
+const fileUpload = require('express-fileupload')
 const app = express()  // make express methods available
 const routes = require('./routes')
 const methodOverride = require('method-override')
@@ -7,6 +8,11 @@ const methodOverride = require('method-override')
 app.use(express.static('public'));
 app.use(methodOverride('_method'))
 app.use(express.urlencoded({ extended: true}))
+
+app.use(fileUpload({
+    createParentPath: true
+  })
+)
 
 app.get('/', (req, res) => {
     res.redirect('/tabs')

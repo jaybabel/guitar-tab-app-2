@@ -53,7 +53,7 @@ const editTab = (req, res) => {
 }
 
 const renderNew = (req, res) => {
-    res.render('new.ejs')
+    res.render('newTab.ejs')
 }
 
 const postTab = (req, res) => {

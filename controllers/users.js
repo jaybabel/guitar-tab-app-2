@@ -25,17 +25,7 @@ const addNew = (req, res) => {
 }
 
 const renderProfile = (req, res) => {
-    User.findByPk(req.params.index, {
-        include: [{
-            model: Tab,
-            attributes: ['id','name']
-        }] 
-    })
-    .then((user) => {
-        res.render('users/profile.ejs', {
-            user: user
-        })
-    })
+    res.render('users/profile.ejs')
 }
 
 const editProfile = (req, res) => {

@@ -62,20 +62,20 @@
             <h2>Search Results</h2>
             <div id="resultsList">
                <ul>
-                   <% for(let i=0; i <10; i++) { %>
+                   <% for(let i=0; i <tabs.length; i++) { %>
                         <li>
-                            Guitar Tab Record 1
+                            <%= tabs[i].tabTitle %>
                         </li>                        
                     <% } %>
                 </ul>
             </div>
         </div>
         <br><br>
-        <a href="/tab/1/edit">Edit Tab Page</a><br>
+        <a href="/tabs/1/edit">Edit Tab Page</a><br>
     </main>
     <footer>
         <br><br>
-        <a href="/tab/1">Show Tab Page</a><br>
+        <a href="/tabs/1">Show Tab Page</a><br>
         <br><br>
     </footer>
 </body>

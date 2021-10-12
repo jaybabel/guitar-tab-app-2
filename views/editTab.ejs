@@ -11,7 +11,7 @@
 
 <body>
     <header>
-        <h1>Edit Tab Page</h1>
+        <h1>Edit Page</h1>
         <h4>Admin login</h4>
     </header>
     <main>
@@ -25,6 +25,17 @@
             Tuning: <%= tab.Tuning.tuningName %><br><br>
             Source: <%= tab.tabSource %><br><br>
             Tab File: <%= tab.tabURL %>
+
+            <br><br><br><br>
+            <hr style="width: 300px">
+            <br>
+            <h2>Add Artist</h2>
+            <form action="/tabs/<%= artists.id %>?_method=PUT" method="POST">
+                Artist Name: <input type="text" name="artistName" size="60"/>
+                <br><br>
+                <input type="submit" name="" value="Update Artist Name"/>
+                <br><br>
+            </form>
         </div>
         <div id="updatedRecord">
         <form action="/tabs/<%= tab.id %>?_method=PUT" method="POST">

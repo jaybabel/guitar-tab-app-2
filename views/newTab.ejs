@@ -11,12 +11,10 @@
 
 <body>
     <header>
-        <h1>New Tab Page</h1>
-        <h4>Admin login</h4>
+        <h1>New Guitar Tab Page</h1>
     </header>
     <main>
         <form action="/tabs" method="POST">
-            <h2>New Guitar Tab Record</h2>
             Title: <input type="text" name="tabTitle"/><br><br>
             <label for="artist">Artist:</label>
             <select name="artist" id="artist">
@@ -59,6 +57,15 @@
                 <input type="submit" value="Create Guitar Tab"/>
             <br><br>
         </form>
+        <div id="addArtist">
+            <h2>Add Artist</h2>
+            <form action="/tabs/<%= artists.id %>?_method=PUT" method="POST">
+                Artist Name: <input type="text" name="artistName" size="60"/>
+                <br><br>
+                <input type="submit" name="" value="Update Artist Name"/>
+                <br><br>
+            </form>
+        </div>
     </main>
     <footer>
         <br><br>

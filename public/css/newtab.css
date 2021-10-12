@@ -12,7 +12,7 @@ h1 {
 
 h2 {
     text-align: center;
-    color: whitesmoke;
+    color:rgb(71, 34, 6);
 }
 
 h4 {
@@ -38,6 +38,11 @@ form {
     padding-left: 50px;
     color: whitesmoke;
     height: 500px;
+}
+
+#addArtist {
+    text-align: left;
+    width: 500px;
 }
 
 footer {

@@ -67,7 +67,6 @@ const renderEdit = (req, res) => {
 }
 
 const editTab = (req, res) => {
-    console.log('==================== edit tab run ====================')
     Tab.update(req.body, {
         where: { id: req.params.index },
         returning: true,
@@ -94,6 +93,12 @@ const postTab = (req, res) => {
     })
 }
 
+const newArtist = (req, res) => {
+    Artist.create(req.body).then((newArtist) => {
+        res.redirect('/');
+    })
+}
+
 module.exports = {
     index,
     renderNew,
@@ -102,5 +107,6 @@ module.exports = {
     deleteTab,
     renderEdit,
     editTab,
-    show
+    show,
+    newArtist
 }

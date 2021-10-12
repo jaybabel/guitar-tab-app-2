@@ -18,8 +18,8 @@
         <div id="searchCriteria">
             <h2>Search Tabs by:</h><br>
 
-        <form class="search" action="/tabs/searchTitle" method="POST">                
-            <label for="tabTitle">Title</label>
+        <form action="/tabs/search" method="POST">                
+            <label for="tabTitle">&nbsp&nbsp&nbspTitle</label>
             <select name="tabTitle" id="tabTitle">
                 <option value=""></option>
                 <% for(let i=0; i <tabs.length; i++) { %>
@@ -27,33 +27,27 @@
                 <% } %>
             </select>
             <button type="button">Search</button>
-            <br>
         </form>
 
-        <form class="search" action="/tabs/searchArtist" method="POST"></form>
-            <label for="artist">Artist:</label>
+
+            <label for="artist">&nbsp&nbsp&nbsp&nbsp&nbspArtist</label>
             <select name="artist" id="artist">
                 <option value=""></option>
                 <% for(let i=0; i <artists.length; i++) { %>
                 <option value="artist"><%= artists[i].artistName %></option>
                 <% } %>
             </select>
-            <button type="button">Search</button>
-            <br>
-        </form>
-
-
             <br>
             <label for="difficulty">Difficulty</label>
-            <select name="difficulty" id="difficulty">
+            <select class="dropdown" name="difficulty" id="difficulty">
                 <option value=""></option>
                 <option value="Easy">Easy</option>
                 <option value="Moderate">Moderate</option>
                 <option value="Difficult">Difficult</option>
             </select>
             <br>
-            <label for="genre">Genre</label>
-            <select name="genre" id="genre">
+            <label for="genre">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspGenre</label>
+            <select class="dropdown" name="genre" id="genre">
                 <option value=""></option>
                 <option value="Pop">Pop</option>
                 <option value="Folk/Traditional">Folk/Traditional</option>
@@ -63,8 +57,8 @@
                 <option value="Holiday">Holiday</option>                
             </select>
             <br>
-            <label for="rating">Rating</label>
-            <select name="rating" id="rating">
+            <label for="rating">&nbsp&nbsp&nbsp&nbsp&nbspRating</label>
+            <select class="dropdown" name="rating" id="rating">
                 <option value=""></option>
                 <option value="5">5</option>
                 <option value="4">4</option>
@@ -73,8 +67,8 @@
                 <option value="1">1</option>
             </select>
             <br>
-            <label for="tuning">Tuning:</label>
-            <select name="tuning" id="tuning">
+            <label for="tuning">&nbsp&nbsp&nbsp&nbsp&nbspTuning</label>
+            <select class="dropdown" name="tuning" id="tuning">
                 <option value=""></option>
                 <% for(let i=0; i <tunings.length; i++) { %>
                 <option value="tuning"><%= tunings[i].tuningName %></option>

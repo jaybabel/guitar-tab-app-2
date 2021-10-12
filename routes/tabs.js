@@ -16,7 +16,6 @@ router.get('/:index', ctrl.tabs.show)
 
 router.get('/profile/:index', ctrl.users.renderProfile)
 
-router.post('/searchTitle', ctrl.tabs.searchTitle)
-router.post('/searchArtist', ctrl.tabs.searchArtist)
+router.post('/searchTitle', ctrl.tabs.search)
 
 module.exports = router;

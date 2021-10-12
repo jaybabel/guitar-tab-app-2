@@ -16,8 +16,9 @@
     </header>
     <main>
         <div id="searchCriteria">
-            <h2>Search Tabs by:</h2>
+            <h2>Search Tabs by:</h><br>
 
+        <form class="search" action="/tabs/searchTitle" method="POST">                
             <label for="tabTitle">Title</label>
             <select name="tabTitle" id="tabTitle">
                 <option value=""></option>
@@ -25,7 +26,11 @@
                     <option value="tabTitle"><%= tabs[i].tabTitle %></option>
                 <% } %>
             </select>
+            <button type="button">Search</button>
             <br>
+        </form>
+
+        <form class="search" action="/tabs/searchArtist" method="POST"></form>
             <label for="artist">Artist:</label>
             <select name="artist" id="artist">
                 <option value=""></option>
@@ -33,6 +38,11 @@
                 <option value="artist"><%= artists[i].artistName %></option>
                 <% } %>
             </select>
+            <button type="button">Search</button>
+            <br>
+        </form>
+
+
             <br>
             <label for="difficulty">Difficulty</label>
             <select name="difficulty" id="difficulty">
@@ -75,6 +85,7 @@
             <button type="button">Search</button>
             <br><br>
         </div>
+
         <div id="searchResults">
             <h2>Search Results</h2>
             <div id="resultsList">

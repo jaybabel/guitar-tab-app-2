@@ -27,7 +27,7 @@
             Tab File: <%= tab.tabURL %>
         </div>
         <div id="updatedRecord">
-        <form action="/tab" method="POST">
+        <form action="/tabs/<%= tab.id %>?_method=PUT" method="POST">
             <h2>Updated Guitar Tab Record</h2>
             Title: <input type="text" name="tabTitle" value="<%= tab.tabTitle %>"/><br><br>
             Artist: <select name="artist" id="artist">
@@ -37,30 +37,30 @@
             </select><br><br>
             <label for="difficulty">Difficulty:</label>
             <select name="difficulty" id="difficulty"value=" <%= tab.difficulty %>">
-                <option value="difficulty">Easy</option>
-                <option value="difficulty">Moderate</option>
-                <option value="difficulty">Difficult</option>
+                <option value="Easy">Easy</option>
+                <option value="Moderate">Moderate</option>
+                <option value="Difficult">Difficult</option>
             </select>
             <br><br>
 
             <label for="genre">Genre:</label>
             <select name="genre" id="genre">
-                <option value="genre">Pop</option>
-                <option value="genre">Folk/Traditional</option>
-                <option value="genre">Rock</option>                
-                <option value="genre">Country</option>
-                <option value="genre">Easy Listening</option>
-                <option value="genre">Holiday</option>                
+                <option value="Pop">Pop</option>
+                <option value="Folk/Traditional">Folk/Traditional</option>
+                <option value="Rock">Rock</option>                
+                <option value="Country">Country</option>
+                <option value="Easy Listening">Easy Listening</option>
+                <option value="Holiday">Holiday</option>                
             </select>
             <br><br>
 
             <label for="rating">Rating</label>
             <select name="rating" id="rating">
-                <option value="rating">5</option>
-                <option value="rating">4</option>
-                <option value="rating">3</option>
-                <option value="rating">2</option>
-                <option value="rating">1</option>
+                <option value="5">5</option>
+                <option value="4">4</option>
+                <option value="3">3</option>
+                <option value="2">2</option>
+                <option value="1">1</option>
             </select>
             <br><br>
                 
@@ -70,11 +70,7 @@
                 <% } %>
             </select><br><br>
             Source: <input type="text" name="tabSource" value="<%= tab.tabSource %>" size="75"/><br><br>
-            Tab File: <input type="text" name="tabSource" value="<%= tab.tabURL %>" size="50"/>
-            <form action="">
-                <input type="file" id="myfile" name="myfile"><br><br>
-                <input type="submit">
-            </form>
+            Tab File: <input type="text" name="tabURL" value="<%= tab.tabURL %>" size="50"/>
             <br><br>
             <input type="submit" name="" value="Update Guitar Tab"/>
             <br><br>

@@ -67,12 +67,12 @@ const renderEdit = (req, res) => {
 }
 
 const editTab = (req, res) => {
+    console.log('==================== edit tab run ====================')
     Tab.update(req.body, {
         where: { id: req.params.index },
         returning: true,
-    }
-    )
-        .then(tab => {
+    })
+        .then(() => {
             res.redirect('/')
         })
 }

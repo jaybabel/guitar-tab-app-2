@@ -18,11 +18,11 @@
         <div id="currentRecord">
             <h2>Current Guitar Tab Record</h2>
             Title: <%= tab.tabTitle %><br><br>
-            Artist: <%= tab.artist %><br><br>
+            Artist: <%= tab.Artist.artistName %><br><br>
             Current Difficulty: <%= tab.difficulty %><br><br>
             Current Genre: <%= tab.genre %><br><br>
             Current Rating: <%= tab.rating %><br><br>
-            Tuning: <%= tab.tuning %><br><br>
+            Tuning: <%= tab.Tuning.tuningName %><br><br>
             Source: <%= tab.tabSource %><br><br>
             Tab File: <%= tab.tabURL %>
         </div>
@@ -30,8 +30,11 @@
         <form action="/tab" method="POST">
             <h2>Updated Guitar Tab Record</h2>
             Title: <input type="text" name="tabTitle" value="<%= tab.tabTitle %>"/><br><br>
-            Artist: <input type="text" name="artist" value="<%= tab.artist %>"/><br><br>
-
+            Artist: <select name="artist" id="artist">
+                <% for(let i=0; i <artists.length; i++) { %>
+                <option value="<%= artists[i].id %>"><%= artists[i].artistName %></option>
+                <% } %>
+            </select><br><br>
             <label for="difficulty">Difficulty:</label>
             <select name="difficulty" id="difficulty"value=" <%= tab.difficulty %>">
                 <option value="difficulty">Easy</option>
@@ -61,7 +64,11 @@
             </select>
             <br><br>
                 
-            Tuning: <input type="text" name="tuning" value="<%= tab.tuning %>"/><br><br>
+            Tuning: <select name="tuning" id="tuning">
+                <% for(let i=0; i <tunings.length; i++) { %>
+                <option value="<%= tunings[i].id %>"><%= tunings[i].tuningName %></option>
+                <% } %>
+            </select><br><br>
             Source: <input type="text" name="tabSource" value="<%= tab.tabSource %>" size="75"/><br><br>
             Tab File: <input type="text" name="tabSource" value="<%= tab.tabURL %>" size="50"/>
             <form action="">

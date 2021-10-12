@@ -47,12 +47,23 @@ const deleteTab = (req, res) => {
 }
 
 const renderEdit = (req, res) => {
-    Tab.findByPk(req.params.index)
-        .then(foundTab => {
+    Tab.findByPk(req.params.index, {
+    include: [
+        Tuning,
+        Artist
+    ]
+    })
+    .then(foundTab => {
+        Artist.findAll().then(artists => {
+            Tuning.findAll().then(tunings => {
             res.render('editTab.ejs', {
-                tab: foundTab
+                tab: foundTab,
+                artists: artists,
+                tunings: tunings
+            });
             });
         });
+    })
 }
 
 const editTab = (req, res) => {

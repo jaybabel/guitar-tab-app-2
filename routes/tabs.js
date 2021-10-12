@@ -11,8 +11,6 @@ router.get('/new', ctrl.tabs.renderNew)
 router.get('/:index/edit', ctrl.tabs.renderEdit)
 router.put('/:index', ctrl.tabs.editTab)
 
-router.post('/', ctrl.tabs.newArtist)
-
 router.post('/', ctrl.tabs.postTab)
 router.get('/:index', ctrl.tabs.show)
 

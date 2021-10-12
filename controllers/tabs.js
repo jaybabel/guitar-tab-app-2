@@ -93,11 +93,6 @@ const postTab = (req, res) => {
     })
 }
 
-const newArtist = (req, res) => {
-    Artist.create(req.body).then((newArtist) => {
-        res.redirect('/');
-    })
-}
 
 module.exports = {
     index,
@@ -107,6 +102,5 @@ module.exports = {
     deleteTab,
     renderEdit,
     editTab,
-    show,
-    newArtist
+    show
 }

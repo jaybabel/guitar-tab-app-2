@@ -1,4 +1,5 @@
 module.exports = {
     tabs: require('./tabs'),
-    users: require('./users')
+    users: require('./users'),
+    artists: require('./artists')
 }

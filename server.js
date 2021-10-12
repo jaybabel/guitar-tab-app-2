@@ -23,6 +23,6 @@ app.use('/users', routes.users)
 app.use('/artists', routes.artists)
 
 // listen at port 3003
-app.listen(3003, () => {
+app.listen(process.env.PORT || 3003, () => {
     console.log('I am listening')
 })

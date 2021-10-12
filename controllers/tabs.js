@@ -1,6 +1,7 @@
 const Tab = require('../models').Tab
 const Tuning = require('../models').Tuning
 const Artist = require('../models').Artist
+const { Op } = require("sequelize");
 
 const index = (req, res) => {
     Artist.findAll().then(artists => {
@@ -93,6 +94,29 @@ const postTab = (req, res) => {
     })
 }
 
+//This is used to search
+const search = (req, res) => {
+    console.log(req.body)
+    Tab.findAll({
+        where:
+        {
+            name: {
+            [Op.substring]: req.body.search
+                    }
+                },
+            include: [
+                {
+                    model: Artist,
+                    attributes: ["artistName", "id"],
+                },
+            ],        
+    }).then((foundTabs) => {
+        console.log("found Tab", foundTabs[0].tabTitle);
+        res.render("tabs/index.ejs", {
+            tab: foundTabs,
+          });
+    });
+};
 
 module.exports = {
     index,
@@ -102,5 +126,6 @@ module.exports = {
     deleteTab,
     renderEdit,
     editTab,
-    show
+    show,
+    search
 }

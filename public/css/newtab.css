@@ -43,6 +43,7 @@ form {
 #addArtist {
     text-align: left;
     width: 500px;
+    background-color: rgba(112, 128, 144, 0.3);
 }
 
 main {

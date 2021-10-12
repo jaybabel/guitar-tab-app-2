@@ -11,20 +11,18 @@
 
 <body>
     <header>
-        <h1>Delete Tab Page</h1>
-        <h4>Admin login</h4>
+        <h1>Delete Guitar Tab</h1>
     </header>
     <main>
         <form>
-            <h2>Delete Guitar Tab Record</h2>
             Title: <input type="text" name="tabTitle" value="<%= tab.tabTitle %>"/><br><br>
             Artist: <input type="text" name="artist" value="<%= tab.artist %>"/><br><br>
             Difficulty: <input type="text" name="difficulty" value="<%= tab.difficulty %>"/><br><br>
             Genre: <input type="text" name="genre" value="<%= tab.genre %>"/><br><br>
             Rating: <input type="text" name="rating" value="<%= tab.rating %>"/><br><br>
             Tuning: <input type="text" name="tuning" value="<%= tab.tuning %>"/><br><br>
-            Source: <input type="text" name="tabSource" value="<%= tab.tabSource %>"/><br><br>
-            Tab File: <input type="text" name="tabSource" value="<%= tab.tabURL %>"/>
+            Source: <input type="text" name="tabSource" value="<%= tab.tabSource %>" size="60"/><br><br>
+            Tab File: <input type="text" name="tabSource" value="<%= tab.tabURL %>" size="60"/>
             <br>
         </form>
         <form action="/tabs/<%= tab.id %>?_method=DELETE" method="POST">

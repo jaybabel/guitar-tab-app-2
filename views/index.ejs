@@ -19,6 +19,7 @@
             <h2>Search Tabs by:</h2>
             <label for="tabTitle">Title</label>
             <select name="tabTitle" id="tabTitle">
+                <option value=""></option>
                 <% for(let i=0; i <tabs.length; i++) { %>
                     <option value="tabTitle"><%= tabs[i].tabTitle %></option>
                 <% } %>
@@ -26,6 +27,7 @@
             <br>
             <label for="artist">Artist:</label>
             <select name="artist" id="artist">
+                <option value=""></option>
                 <% for(let i=0; i <artists.length; i++) { %>
                 <option value="artist"><%= artists[i].artistName %></option>
                 <% } %>
@@ -33,32 +35,36 @@
             <br>
             <label for="difficulty">Difficulty</label>
             <select name="difficulty" id="difficulty">
-                <option value="difficulty">Easy</option>
-                <option value="difficulty">Moderate</option>
-                <option value="difficulty">Difficult</option>
+                <option value=""></option>
+                <option value="Easy">Easy</option>
+                <option value="Moderate">Moderate</option>
+                <option value="Difficult">Difficult</option>
             </select>
             <br>
             <label for="genre">Genre</label>
             <select name="genre" id="genre">
-                <option value="genre">Pop</option>
-                <option value="genre">Folk/Traditional</option>
-                <option value="genre">Rock</option>                
-                <option value="genre">Country</option>
-                <option value="genre">Easy Listening</option>
-                <option value="genre">Holiday</option>                
+                <option value=""></option>
+                <option value="Pop">Pop</option>
+                <option value="Folk/Traditional">Folk/Traditional</option>
+                <option value="Rock">Rock</option>                
+                <option value="Country">Country</option>
+                <option value="Easy Listening">Easy Listening</option>
+                <option value="Holiday">Holiday</option>                
             </select>
             <br>
             <label for="rating">Rating</label>
             <select name="rating" id="rating">
-                <option value="rating">5</option>
-                <option value="rating">4</option>
-                <option value="rating">3</option>
-                <option value="rating">2</option>
-                <option value="rating">1</option>
+                <option value=""></option>
+                <option value="5">5</option>
+                <option value="4">4</option>
+                <option value="3">3</option>
+                <option value="2">2</option>
+                <option value="1">1</option>
             </select>
             <br>
             <label for="tuning">Tuning:</label>
             <select name="tuning" id="tuning">
+                <option value=""></option>
                 <% for(let i=0; i <tunings.length; i++) { %>
                 <option value="tuning"><%= tunings[i].tuningName %></option>
                 <% } %>

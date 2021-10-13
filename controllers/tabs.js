@@ -102,19 +102,13 @@ const search = (req, res) => {
     Artist.findAll().then(artists => {
         Tuning.findAll().then(tunings => {
             Tab.findAll({
-                where: { 
-                    rating: req.body.rating 
-                    }
-                // [Op.or] : [  
-                //     { difficulty: req.body.difficulty },
-                //     { genre : req.body.genre },
-                //     { rating: req.body.rating }
-                //     // { [Op.substring] : [ { tabTitle: req.body.tabTitle } ] },
-                //     // { [Op.substring] : [ { difficulty: req.body.difficulty } ] },
-                //     // { [Op.substring] : [ { genre : req.body.genre } ] },
-                //     // { [Op.substring] : [ { rating: req.body.rating } ] },
-                // ]
-            
+                where: { [Op.or] : [
+                    { difficulty: req.body.difficulty },
+                    { rating: req.body.rating },
+                    { genre : req.body.genre },
+                ]
+            }
+
         }).then(tabs => {
 
             console.log(" ================== found Tab =======", tabs);

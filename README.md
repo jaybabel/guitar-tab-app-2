@@ -44,7 +44,7 @@ Admin screen:
 * EJS
 
 ### Notable HTML tag
-Since I decided to rely on PDF files for most of the tablature, I chose the iframe HTML tag to display the tabs.  While I've found that doe not handle Word documents, in some cases it allows me to leverage capabilities from other websites.  Specifically, tabs from the GuitarETab website.  The Gimme Shelter tab is a good example.  That tab record is a link to the GuitarETab website and allows the user to turn on the website's Autoscroll feature which scrolls through the tab at variable speeds.
+Since I decided to rely on PDF files for most of the tablature, I chose the iframe HTML tag to display the tabs.  While I've found that iframe does not handle Word documents (the tab file downloads to the browser), in some cases it allows me to leverage capabilities from other websites.  Specifically, tabs from the GuitarETab website.  The Gimme Shelter tab is a good example.  That tab record is a link to the GuitarETab website and allows the user to turn on the website's Autoscroll feature which scrolls through the tab at variable speeds.
 
 ## User stories - Jay’s Fabulous Guitar Tab Database
 

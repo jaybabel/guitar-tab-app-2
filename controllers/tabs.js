@@ -104,12 +104,18 @@ const search = (req, res) => {
             Tab.findAll().then(tabs => {
             ({
                 where: { 
-                [Op.or] : [  
-                   { [Op.substring] : [ { tabTitle: req.body.tabTitle } ] },
-                   { [Op.substring] : [ { difficulty: req.body.difficulty } ] },
-                    { [Op.substring] : [ { genre : req.body.genre } ] },
-                    { [Op.substring] : [ { rating: req.body.rating } ] },
-                ]
+                    rating: {
+                        [Op.eq]: 3
+                    }
+                // [Op.or] : [  
+                //     { difficulty: req.body.difficulty },
+                //     { genre : req.body.genre },
+                //     { rating: req.body.rating }
+                //     // { [Op.substring] : [ { tabTitle: req.body.tabTitle } ] },
+                //     // { [Op.substring] : [ { difficulty: req.body.difficulty } ] },
+                //     // { [Op.substring] : [ { genre : req.body.genre } ] },
+                //     // { [Op.substring] : [ { rating: req.body.rating } ] },
+                // ]
             }
         })
             console.log(" ================== found Tab =======", tabs);

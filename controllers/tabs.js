@@ -104,7 +104,7 @@ const search = (req, res) => {
                 where: 
                 { tabTitle: req.body.tabTitle },     
             }).then((tabs) => {
- //     console.log(" ================== found Tab =======", tabs);
+ //       console.log(" ================== found Tab =======", tabs);
         res.render("index.ejs", {
             tabs: tabs,
             artists: artists,

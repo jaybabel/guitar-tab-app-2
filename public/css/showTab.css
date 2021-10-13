@@ -9,6 +9,7 @@ main {
     align-content:space-between;
     padding-left: 50px;
     flex-direction: row;
+    width: 1600px;
 }
 
 header {
@@ -19,7 +20,7 @@ header {
 #displayTab {
     display: flex;
     flex-direction: column;
-    width: 850px;
+    width: 1050px;
 }
 
 #sidebar {

@@ -37,8 +37,16 @@ Admin screen:
 
 ![Screen Shot 2021-10-09 at 4 11 51 PM](https://user-images.githubusercontent.com/8105789/136674021-52e482fd-0da7-4fd5-9264-038f7fb1a942.jpeg)
 
+## Technologies
+* Node.js
+* Postgres
+* Express
+* EJS
 
-User stories - Jay’s Fabulous Guitar Tab Database
+### Notable HTML tag
+Since I decided to rely on PDF files for most of the tablature, I chose the iframe HTML tag to display the tabs.  While I've found that doe not handle Word documents, in some cases it allows me to leverage capabilities from other websites.  Specifically, tabs from the GuitarETab website.  The Gimme Shelter tab is a good example.  That tab record is a link to the GuitarETab website and allows the user to turn on the website's Autoscroll feature which scrolls through the tab at variable speeds.
+
+## User stories - Jay’s Fabulous Guitar Tab Database
 
 I am a ________
 	I want to ________
@@ -95,5 +103,9 @@ I am an application admin
     
     
 
+## Resources
+
 Open tunings graphics from https://www.guitar-chord.org/alternate-tunings.html
+
+Scrolling tabs from GuitarETabs.com
 

@@ -101,24 +101,24 @@ const search = (req, res) => {
     console.log("============ END req.body ===========")
     Artist.findAll().then(artists => {
         Tuning.findAll().then(tunings => {
-            Tab.findAll.then(tabs => {
+            Tab.findAll().then(tabs => {
             ({
                 where: { 
                 [Op.or] : [  
                    { [Op.substring] : [ { tabTitle: req.body.tabTitle } ] },
-                   { [Op.substring] : [ { difficulty: difficulty } ] },
-                   { [Op.substring] : [ { genre : genre } ] },
-                   { [Op.substring] : [ { rating: rating } ] },
+                   { [Op.substring] : [ { difficulty: req.body.difficulty } ] },
+                    { [Op.substring] : [ { genre : req.body.genre } ] },
+                    { [Op.substring] : [ { rating: req.body.rating } ] },
                 ]
             }
         })
             console.log(" ================== found Tab =======", tabs);
-            res.render("index.ejs", {
-                tabs: tabs,
-                artists: artists,
-                tunings: tunings
+                res.render("index.ejs", {
+                    tabs: tabs,
+                    artists: artists,
+                    tunings: tunings
                 });
-            });
+            })
         });
     });
 }

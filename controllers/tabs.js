@@ -101,15 +101,13 @@ const search = (req, res) => {
     Artist.findAll().then(artists => {
         Tuning.findAll().then(tunings => {
             Tab.findAll({
-                where: {
-                [Op.substring] : [
-                    { tabTitle: req.body.tabTitle },  
-                ],
-                [Op.or] : [
-                    {  rating: 4 }
+                where: { 
+                [Op.or] : [  
+                   { [Op.substring] : [ { tabTitle: req.body.tabTitle } ] },
+                   { [Op.substring] : [ {  rating: 4 } ] }
                 ]
             }
-            }).then((tabs) => {
+        }).then((tabs) => {
         console.log(" ================== found Tab =======", tabs);
         res.render("index.ejs", {
             tabs: tabs,

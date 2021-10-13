@@ -12,26 +12,23 @@
 <body>
     <header>
         <h1>Welcome to Jay's Fabulous Guitar Tab Database Application</h1>
-        <a href="/users/login">Admin login</a>
+
     </header>
     <main>
         <div id="searchCriteria">
-            <h2>Search Tabs by:</h><br>
+            <h2>Search Tabs by:</h><br><br>
 
         <form action="/tabs/search" method="POST">                
-            <label for="tabTitle">&nbsp&nbsp&nbspTitle</label>
-            <select name="tabTitle" id="tabTitle">
+            <label for="tabTitle">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspTitle</label>
+            <select class="dropdown" name="tabTitle" id="tabTitle">
                 <option value=""></option>
                 <% for(let i=0; i <tabs.length; i++) { %>
                     <option value="tabTitle"><%= tabs[i].tabTitle %></option>
                 <% } %>
             </select>
-            <button type="button">Search</button>
-        </form>
-
-
+            <br>
             <label for="artist">&nbsp&nbsp&nbsp&nbsp&nbspArtist</label>
-            <select name="artist" id="artist">
+            <select class="dropdown" name="artist" id="artist">
                 <option value=""></option>
                 <% for(let i=0; i <artists.length; i++) { %>
                 <option value="artist"><%= artists[i].artistName %></option>
@@ -46,7 +43,7 @@
                 <option value="Difficult">Difficult</option>
             </select>
             <br>
-            <label for="genre">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspGenre</label>
+            <label for="genre">&nbsp&nbsp&nbsp&nbsp&nbspGenre</label>
             <select class="dropdown" name="genre" id="genre">
                 <option value=""></option>
                 <option value="Pop">Pop</option>
@@ -57,7 +54,7 @@
                 <option value="Holiday">Holiday</option>                
             </select>
             <br>
-            <label for="rating">&nbsp&nbsp&nbsp&nbsp&nbspRating</label>
+            <label for="rating">&nbsp&nbsp&nbsp&nbspRating</label>
             <select class="dropdown" name="rating" id="rating">
                 <option value=""></option>
                 <option value="5">5</option>
@@ -67,7 +64,7 @@
                 <option value="1">1</option>
             </select>
             <br>
-            <label for="tuning">&nbsp&nbsp&nbsp&nbsp&nbspTuning</label>
+            <label for="tuning">&nbsp&nbsp&nbsp&nbspTuning</label>
             <select class="dropdown" name="tuning" id="tuning">
                 <option value=""></option>
                 <% for(let i=0; i <tunings.length; i++) { %>
@@ -75,9 +72,8 @@
                 <% } %>
             </select>
             <br>
-            <br><br>
-            <button type="button">Search</button>
-            <br><br>
+            <input type="submit" value="Search"/>
+        </form>
         </div>
 
         <div id="searchResults">

@@ -98,24 +98,28 @@ const postTab = (req, res) => {
 const search = (req, res) => {
     console.log(" ============ button pressed ============")
     console.log(req.body)
+    console.log("============ END req.body ===========")
     Artist.findAll().then(artists => {
         Tuning.findAll().then(tunings => {
-            Tab.findAll({
+            Tab.findAll.then(tabs => {
+            ({
                 where: { 
                 [Op.or] : [  
                    { [Op.substring] : [ { tabTitle: req.body.tabTitle } ] },
-                   { [Op.substring] : [ {  rating: 4 } ] }
+                   { [Op.substring] : [ { difficulty: difficulty } ] },
+                   { [Op.substring] : [ { genre : genre } ] },
+                   { [Op.substring] : [ { rating: rating } ] },
                 ]
             }
-        }).then((tabs) => {
-        console.log(" ================== found Tab =======", tabs);
-        res.render("index.ejs", {
-            tabs: tabs,
-            artists: artists,
-            tunings: tunings
+        })
+            console.log(" ================== found Tab =======", tabs);
+            res.render("index.ejs", {
+                tabs: tabs,
+                artists: artists,
+                tunings: tunings
+                });
+            });
         });
-        });
-          });
     });
 }
 

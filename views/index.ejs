@@ -23,7 +23,7 @@
             <select class="dropdown" name="tabTitle" id="tabTitle">
                 <option value=""></option>
                 <% for(let i=0; i <tabs.length; i++) { %>
-                    <option value="tabTitle"><%= tabs[i].tabTitle %></option>
+                    <option value="tabs[i].tabTitle"><%= tabs[i].tabTitle %></option>
                 <% } %>
             </select>
             <br>
@@ -94,9 +94,9 @@
             <form action="/" method="GET"> 
                 <input type="submit" value="Reload List"/>
             </form>
-        </main>
-        </div>
+        </div>            
         <br><br>
+    </main>
     <footer>
         <a href="/tabs/new">New Tab Page</a>
         <br><br>

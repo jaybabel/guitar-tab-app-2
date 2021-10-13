@@ -101,11 +101,9 @@ const search = (req, res) => {
     console.log("============ END req.body ===========")
     Artist.findAll().then(artists => {
         Tuning.findAll().then(tunings => {
-            Tab.findAll().then(tabs => {
-            ({
+            Tab.findAll({
                 where: { 
-                    rating: {
-                        [Op.eq]: 3
+                    rating: req.body.rating 
                     }
                 // [Op.or] : [  
                 //     { difficulty: req.body.difficulty },
@@ -116,8 +114,9 @@ const search = (req, res) => {
                 //     // { [Op.substring] : [ { genre : req.body.genre } ] },
                 //     // { [Op.substring] : [ { rating: req.body.rating } ] },
                 // ]
-            }
-        })
+            
+        }).then(tabs => {
+
             console.log(" ================== found Tab =======", tabs);
                 res.render("index.ejs", {
                     tabs: tabs,
